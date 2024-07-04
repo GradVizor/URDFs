@@ -5,8 +5,10 @@ This repository contains URDFs (Unified Robot Description Format) and associated
 1) ROS_descriptions
    
 This folder includes URDFs and necessary files for projects using ROS 1.
+
     a) two_wheel_drive_description
     Contains .xacro files, launch files, configuration and mesh files for two-wheel drive robots.
+
     b) four_wheel_drive_description
     Contains .xacro files, launch files, configuration and mesh files for four-wheel drive robots.
    
@@ -36,9 +38,12 @@ Along with all the dependencies required to directly use the prototypes in your 
 
 # Usage
 To use these URDFs in your project, follow these steps:
+
   1) Clone the repository to your local machine:
        ```git clone https://github.com/GradVizor/URDFs.git```
-  3) Navigate to the desired folder based on your ROS version and robot type.
-  4) Use the provided launch files to initialize the robot in your ROS environment.
+
+  2) Navigate to the desired folder based on your ROS version and robot type.
+  
+  3) Use the provided launch files to initialize the robot in your ROS environment.
 
 
