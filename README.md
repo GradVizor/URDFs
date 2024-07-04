@@ -5,10 +5,8 @@ This repository contains URDFs (Unified Robot Description Format) and associated
 1) ROS_descriptions
    
 This folder includes URDFs and necessary files for projects using ROS 1.
-
     a) two_wheel_drive_description
     Contains .xacro files, launch files, configuration and mesh files for two-wheel drive robots.
-   
     b) four_wheel_drive_description
     Contains .xacro files, launch files, configuration and mesh files for four-wheel drive robots.
    
