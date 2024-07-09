@@ -39,7 +39,8 @@ To use these URDFs in your project, follow these steps:
        ```git clone https://github.com/GradVizor/URDFs.git```
 
   2) Navigate to the desired folder based on your ROS version and robot type.
+  3) Add the required "CMakeLists.txt" file to your package.
   
-  3) Use the provided launch files to initialize the robot in your ROS environment.
+  4) Use the provided launch files to initialize the robot in your ROS environment.
 
 
