@@ -18,6 +18,8 @@ a) "two_wheel_drive_description" contains .xacro files, launch files, configurat
     
 b) "four_wheel_drive_description" contains .xacro files, launch files, configuration and mesh files for four-wheel drive robots.
 
+c) "eureka_description" contains .xacro files, launch files, configuration and mesh files for 6 dof robotic arm.
+
 # Contents
 
 Each subfolder includes:
