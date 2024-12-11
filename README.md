@@ -20,9 +20,9 @@ b) "four_wheel_drive_description" contains .xacro files, launch files, configura
 
 c) "eureka_description" contains .xacro files, launch files, configuration and mesh files for 6 dof robotic arm having two fingers.
 
-c) "perceptor_description" contains .xacro files, launch files, configuration and mesh files for two-wheel drive robots equiped with a depth-camera mount.
+d) "perceptor_description" contains .xacro files, launch files, configuration and mesh files for two-wheel drive robots equiped with a depth-camera mount.
 
-c) "rhino_description" contains .xacro files, launch files, configuration and mesh files for 6 dof robotic arm having two fingers.
+e) "rhino_description" contains .xacro files, launch files, configuration and mesh files for 6 dof robotic arm having two fingers.
 
 # Contents
 
