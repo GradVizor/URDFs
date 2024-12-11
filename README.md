@@ -6,19 +6,23 @@ This repository contains URDFs (Unified Robot Description Format) and associated
    
 This folder includes URDFs and necessary files for projects using ROS 1.
 
-a) "two_wheel_drive_description" contains .xacro files, launch files, configuration and mesh files for two-wheel drive robots.
+a) "two_wheel_drive_description" contains .xacro files, launch files, configuration and mesh files for two-wheel drive robots equiped with a 2-D lidar mount.
     
-b) "four_wheel_drive_description" contains .xacro files, launch files, configuration and mesh files for four-wheel drive robots.
+b) "four_wheel_drive_description" contains .xacro files, launch files, configuration and mesh files for four-wheel drive robots equiped with a 2-D lidar mount.
    
 2) ROS2_descriptions :-
    
 This folder includes URDFs and necessary files for projects using ROS 2.
 
-a) "two_wheel_drive_description" contains .xacro files, launch files, configuration and mesh files for two-wheel drive robots.
+a) "two_wheel_drive_description" contains .xacro files, launch files, configuration and mesh files for two-wheel drive robots equiped with a 2-D lidar mount.
     
-b) "four_wheel_drive_description" contains .xacro files, launch files, configuration and mesh files for four-wheel drive robots.
+b) "four_wheel_drive_description" contains .xacro files, launch files, configuration and mesh files for four-wheel drive robots equiped with a 2-D lidar mount.
 
-c) "eureka_description" contains .xacro files, launch files, configuration and mesh files for 6 dof robotic arm.
+c) "eureka_description" contains .xacro files, launch files, configuration and mesh files for 6 dof robotic arm having two fingers.
+
+c) "perceptor_description" contains .xacro files, launch files, configuration and mesh files for two-wheel drive robots equiped with a depth-camera mount.
+
+c) "rhino_description" contains .xacro files, launch files, configuration and mesh files for 6 dof robotic arm having two fingers.
 
 # Contents
 
