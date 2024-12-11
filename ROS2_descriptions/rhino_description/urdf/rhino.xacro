@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<robot name="rhino" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find rhino_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find rhino_description)/urdf/rhino.trans" />
+<xacro:include filename="$(find rhino_description)/urdf/rhino.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="1.4561718222937472e-14 1.007034455251554e-17 0.01004348145239828" rpy="0 0 0"/>
+    <mass value="3.2287311937365817"/>
+    <inertia ixx="0.006142" iyy="0.006142" izz="0.012066" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rhino_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rhino_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+</robot>

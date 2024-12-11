@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<robot name="perceptor" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find perceptor_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find perceptor_description)/urdf/robot.trans" />
+<xacro:include filename="$(find perceptor_description)/urdf/robot.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="1.3607801581146301e-14 6.245036549783648e-05 0.04985211406503635" rpy="0 0 0"/>
+    <mass value="23.69385876359562"/>
+    <inertia ixx="0.183403" iyy="0.08382" izz="0.257107" ixy="-0.0" iyz="-4.1e-05" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find perceptor_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find perceptor_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="depth_cam">
+  <inertial>
+    <origin xyz="1.0892620139202336e-13 2.7755575615628914e-17 0.04689061698525029" rpy="0 0 0"/>
+    <mass value="0.9469323004661316"/>
+    <inertia ixx="0.00041" iyy="0.000324" izz="0.000479" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.12 -0.055" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find perceptor_description)/meshes/depth_cam.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.12 -0.055" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find perceptor_description)/meshes/depth_cam.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_wheel">
+  <inertial>
+    <origin xyz="-0.01695744680851065 8.881784197001253e-18 0.02499999999995829" rpy="0 0 0"/>
+    <mass value="1.8545449752671235"/>
+    <inertia ixx="0.002312" iyy="0.001296" izz="0.001296" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.105 -0.0 -0.025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find perceptor_description)/meshes/left_wheel.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.105 -0.0 -0.025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find perceptor_description)/meshes/left_wheel.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_wheel">
+  <inertial>
+    <origin xyz="0.01695744680851065 1.7763568394002505e-17 0.025000000000041746" rpy="0 0 0"/>
+    <mass value="1.8545449752671235"/>
+    <inertia ixx="0.002312" iyy="0.001296" izz="0.001296" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.105 -0.0 -0.025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find perceptor_description)/meshes/right_wheel.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.105 -0.0 -0.025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find perceptor_description)/meshes/right_wheel.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="depth_cam_joint" type="fixed">
+  <origin xyz="0.0 0.12 0.055" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="depth_cam"/>
+</joint>
+
+<joint name="left_joint" type="continuous">
+  <origin xyz="-0.105 0.0 0.025" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="left_wheel"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+<joint name="right_joint" type="continuous">
+  <origin xyz="0.105 0.0 0.025" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="right_wheel"/>
+  <axis xyz="1.0 0.0 0.0"/>
+</joint>
+
+</robot>
